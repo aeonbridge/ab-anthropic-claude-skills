@@ -1,0 +1,6 @@
+{
+  "name": "graphrag",
+  "base_url": "https://github.com/microsoft/graphrag",
+  "output_dir": "output/graphrag",
+  "description": "Comprehensive skill for Microsoft GraphRAG - modular graph-based Retrieval-Augmented Generation system for reasoning over private data"
+}

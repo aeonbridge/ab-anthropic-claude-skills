@@ -99,6 +99,41 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - Multi-user context management
 - Graph RAG for personalized AI applications
 
+### Microsoft GraphRAG Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Microsoft GraphRAG - modular graph-based RAG system for reasoning over private datasets.
+
+**What's Included:**
+- Complete GraphRAG pipeline guide
+- Knowledge graph extraction from unstructured text
+- Hierarchical community detection (Leiden algorithm)
+- Multiple query modes (Global, Local, DRIFT)
+- Indexing pipeline configuration
+- Prompt tuning for domain-specific datasets
+- LLM integration (OpenAI, Azure OpenAI, Ollama)
+- Python API and CLI usage
+- Cost management and optimization
+- Production deployment best practices
+
+**Usage:**
+1. Use the packaged skill: `output/graphrag.zip`
+2. Or explore the skill directory: `output/graphrag/`
+3. Main skill file: `output/graphrag/SKILL.md`
+
+**Key Features:**
+- Extract entities, relationships, and claims from text
+- Build knowledge graphs automatically from documents
+- Hierarchical community detection for multi-level summarization
+- Global search for holistic corpus understanding
+- Local search for entity-specific queries
+- DRIFT search combining entity and community context
+- Domain-specific prompt tuning
+- Support for multiple LLM providers
+- Cost estimation and optimization tools
+- Integration with LangChain, FastAPI, Streamlit
+- Better than baseline RAG for complex reasoning tasks
+
 ## How to Create Skills
 
 This repository demonstrates how to create Claude skills using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
@@ -121,6 +156,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `agno_docs.json` - Documentation-only configuration
 - `ytdlp_github.json` - GitHub configuration for yt-dlp
 - `graphiti_github.json` - GitHub configuration for Graphiti
+- `graphrag_github.json` - GitHub configuration for Microsoft GraphRAG
 
 ## Resources
 
@@ -137,6 +173,11 @@ Configuration files for skill creation are stored in `configs/`:
 - **Graphiti GitHub**: https://github.com/getzep/graphiti
 - **Zep Documentation**: https://help.getzep.com/
 - **Zep Concepts**: https://help.getzep.com/concepts
+
+### Microsoft GraphRAG
+- **GitHub**: https://github.com/microsoft/graphrag
+- **Documentation**: https://microsoft.github.io/graphrag/
+- **Research Paper**: https://arxiv.org/abs/2404.16130
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers
