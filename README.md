@@ -64,6 +64,41 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - SponsorBlock integration
 - Configuration file support for automation
 
+### Graphiti & Zep Knowledge Graph Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Graphiti and Zep - temporal knowledge graph framework for AI agents with dynamic context engineering.
+
+**What's Included:**
+- Complete Graphiti framework guide
+- Zep platform integration
+- Temporal knowledge graph concepts
+- Entity and relationship management
+- Hybrid search implementation (semantic + BM25 + graph traversal)
+- Multi-database support (Neo4j, FalkorDB, Kuzu, Neptune)
+- LLM integration examples
+- Agent framework integration (LangGraph, CrewAI, Autogen)
+- Python, TypeScript, and Go SDK examples
+- Production deployment and best practices
+
+**Usage:**
+1. Use the packaged skill: `output/graphiti.zip`
+2. Or explore the skill directory: `output/graphiti/`
+3. Main skill file: `output/graphiti/SKILL.md`
+
+**Key Features:**
+- Building temporal knowledge graphs for AI agents
+- Persistent agent memory across conversations
+- Bi-temporal data model (event time + ingestion time)
+- Point-in-time historical queries
+- Custom entity types and ontologies
+- Hybrid search combining multiple methods
+- Sub-second query latency
+- Integration with major agent frameworks
+- Enterprise features (RBAC, BYOK, audit logging)
+- Multi-user context management
+- Graph RAG for personalized AI applications
+
 ## How to Create Skills
 
 This repository demonstrates how to create Claude skills using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
@@ -85,6 +120,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `agno_unified.json` - Unified configuration for Agno (docs + GitHub)
 - `agno_docs.json` - Documentation-only configuration
 - `ytdlp_github.json` - GitHub configuration for yt-dlp
+- `graphiti_github.json` - GitHub configuration for Graphiti
 
 ## Resources
 
@@ -96,6 +132,11 @@ Configuration files for skill creation are stored in `configs/`:
 ### yt-dlp
 - **GitHub**: https://github.com/yt-dlp/yt-dlp
 - **Supported Sites**: https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md
+
+### Graphiti & Zep
+- **Graphiti GitHub**: https://github.com/getzep/graphiti
+- **Zep Documentation**: https://help.getzep.com/
+- **Zep Concepts**: https://help.getzep.com/concepts
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers

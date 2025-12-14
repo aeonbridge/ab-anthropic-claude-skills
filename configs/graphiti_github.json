@@ -1,0 +1,6 @@
+{
+  "name": "graphiti",
+  "base_url": "https://github.com/getzep/graphiti",
+  "output_dir": "output/graphiti",
+  "description": "Comprehensive skill for Graphiti - temporal knowledge graph framework for AI agents with dynamic memory management"
+}
