@@ -1,0 +1,19 @@
+{
+  "name": "agno",
+  "base_url": "https://docs.agno.com",
+  "start_urls": [
+    "https://docs.agno.com/",
+    "https://docs.agno.com/introduction",
+    "https://docs.agno.com/get-started/quickstart",
+    "https://docs.agno.com/agents",
+    "https://docs.agno.com/teams",
+    "https://docs.agno.com/workflows",
+    "https://docs.agno.com/tools",
+    "https://docs.agno.com/knowledge",
+    "https://docs.agno.com/memory",
+    "https://docs.agno.com/examples/use-cases/agents/overview"
+  ],
+  "output_dir": "output/agno-docs",
+  "max_depth": 3,
+  "max_pages": 300
+}

@@ -1,0 +1,112 @@
+{
+  "name": "agno",
+  "display_name": "Agno AI Framework",
+  "description": "Comprehensive skill for building, deploying, and managing multi-agent AI systems using Agno - an incredibly fast multi-agent framework with runtime and control plane",
+  "version": "1.0.0",
+  "sources": {
+    "documentation": {
+      "enabled": true,
+      "base_url": "https://docs.agno.com",
+      "start_urls": [
+        "https://docs.agno.com/",
+        "https://docs.agno.com/introduction",
+        "https://docs.agno.com/get-started/quickstart",
+        "https://docs.agno.com/get-started/performance",
+        "https://docs.agno.com/agents",
+        "https://docs.agno.com/teams",
+        "https://docs.agno.com/workflows",
+        "https://docs.agno.com/tools",
+        "https://docs.agno.com/knowledge",
+        "https://docs.agno.com/memory",
+        "https://docs.agno.com/storage",
+        "https://docs.agno.com/models",
+        "https://docs.agno.com/examples/use-cases/agents/overview",
+        "https://docs.agno.com/examples/use-cases/teams/overview",
+        "https://docs.agno.com/examples/use-cases/workflows/overview",
+        "https://docs.agno.com/deployment/agentos",
+        "https://docs.agno.com/deployment/docker",
+        "https://docs.agno.com/api-reference"
+      ],
+      "max_depth": 3,
+      "max_pages": 500,
+      "include_patterns": [
+        "/get-started/",
+        "/agents",
+        "/teams",
+        "/workflows",
+        "/tools",
+        "/knowledge",
+        "/memory",
+        "/storage",
+        "/models",
+        "/examples/",
+        "/deployment/",
+        "/api-reference",
+        "/integrations/",
+        "/guides/"
+      ],
+      "exclude_patterns": [
+        "/changelog",
+        "/blog/",
+        "/_next/",
+        "/static/"
+      ]
+    },
+    "github": {
+      "enabled": true,
+      "repository": "agno-agi/agno",
+      "include_readme": true,
+      "include_code_samples": true,
+      "max_files": 200,
+      "file_patterns": [
+        "*.md",
+        "*.py",
+        "README*",
+        "examples/**/*.py",
+        "cookbook/**/*.py",
+        "libs/**/*.py"
+      ],
+      "exclude_patterns": [
+        "tests/",
+        "__pycache__/",
+        "*.pyc",
+        ".git/",
+        "node_modules/"
+      ]
+    }
+  },
+  "output_dir": "output/agno",
+  "enhancement": {
+    "enabled": true,
+    "focus_areas": [
+      "agent creation and configuration",
+      "multi-agent teams and collaboration",
+      "workflows and orchestration",
+      "tools and integrations",
+      "knowledge bases and RAG patterns",
+      "memory management",
+      "model providers and LLM integration",
+      "deployment with AgentOS",
+      "performance optimization",
+      "code examples and best practices"
+    ]
+  },
+  "metadata": {
+    "author": "skill-seekers",
+    "tags": [
+      "ai",
+      "agents",
+      "multi-agent",
+      "framework",
+      "llm",
+      "agno",
+      "agentos",
+      "python",
+      "rag",
+      "workflows",
+      "teams"
+    ],
+    "category": "AI Frameworks",
+    "license": "Apache-2.0"
+  }
+}
