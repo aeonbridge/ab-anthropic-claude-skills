@@ -173,6 +173,41 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - Complete REST API with authentication
 - Multi-instance support
 
+### Model Context Protocol (MCP) Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Model Context Protocol (MCP) - standardized protocol for integrating LLMs with external context, tools, and data sources.
+
+**What's Included:**
+- Complete MCP server development guide (Python FastMCP & TypeScript)
+- MCP client implementation patterns
+- Security and OAuth 2.1 authorization
+- MCP Inspector tool for testing and debugging
+- Transport options (STDIO, SSE, HTTP with SSE)
+- Resource, Tool, and Prompt server patterns
+- Integration with Claude Desktop and other clients
+- Best practices for production deployment
+- Common server implementations (filesystem, API, database)
+
+**Usage:**
+1. Use the packaged skill: `output/mcp.zip`
+2. Or explore the skill directory: `output/mcp/`
+3. Main skill file: `output/mcp/SKILL.md`
+
+**Key Features:**
+- Building MCP servers with FastMCP (Python) or TypeScript SDK
+- Implementing resources, tools, and prompts
+- OAuth 2.1 authorization and security
+- JSON-RPC communication protocol
+- STDIO transport for local integrations
+- SSE (Server-Sent Events) for remote connections
+- Structured output with Pydantic models
+- Progress reporting for long-running operations
+- Multi-client support and session management
+- Claude Desktop integration
+- MCP Inspector for development and testing
+- Production deployment patterns
+
 ## How to Create Skills
 
 This repository demonstrates how to create Claude skills using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
@@ -197,6 +232,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `graphiti_github.json` - GitHub configuration for Graphiti
 - `graphrag_github.json` - GitHub configuration for Microsoft GraphRAG
 - `evolution_api_github.json` - GitHub configuration for Evolution API
+- `mcp_github.json` - GitHub configuration for Model Context Protocol
 
 ## Resources
 
@@ -223,6 +259,12 @@ Configuration files for skill creation are stored in `configs/`:
 - **GitHub**: https://github.com/EvolutionAPI/evolution-api
 - **Documentation**: https://doc.evolution-api.com/
 - **Website**: https://evolution-api.com
+
+### Model Context Protocol
+- **Documentation**: https://modelcontextprotocol.io/
+- **Python SDK**: https://github.com/modelcontextprotocol/python-sdk
+- **TypeScript SDK**: https://github.com/modelcontextprotocol/typescript-sdk
+- **Specification**: https://spec.modelcontextprotocol.io/
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers
