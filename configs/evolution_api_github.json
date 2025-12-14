@@ -1,0 +1,6 @@
+{
+  "name": "evolution-api",
+  "base_url": "https://github.com/EvolutionAPI/evolution-api",
+  "output_dir": "output/evolution-api",
+  "description": "Comprehensive skill for Evolution API - open-source WhatsApp integration platform with multi-service chatbot support"
+}

@@ -134,6 +134,45 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - Integration with LangChain, FastAPI, Streamlit
 - Better than baseline RAG for complex reasoning tasks
 
+### Evolution API Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Evolution API - open-source WhatsApp integration platform with multi-service chatbot and automation support.
+
+**What's Included:**
+- Complete WhatsApp integration guide using Baileys and Official API
+- Instance management and connection handling
+- Comprehensive messaging API (text, media, interactive messages)
+- Webhook system and event handling
+- Integration guides (Typebot, Chatwoot, Dify, OpenAI)
+- Group management and operations
+- Message queue integration (RabbitMQ, Kafka, SQS)
+- Database persistence (PostgreSQL, MySQL)
+- Docker deployment and production setup
+- Node.js and Python webhook examples
+
+**Usage:**
+1. Use the packaged skill: `output/evolution-api.zip`
+2. Or explore the skill directory: `output/evolution-api/`
+3. Main skill file: `output/evolution-api/SKILL.md`
+
+**Key Features:**
+- WhatsApp Business API integration
+- Send/receive text, media, location, contacts, buttons
+- Interactive messages (lists, buttons)
+- Typebot chatbot integration
+- Chatwoot customer service integration
+- OpenAI and Dify AI integration
+- Real-time webhooks for all events
+- Group creation and management
+- Contact and profile management
+- S3/MinIO media storage
+- Redis caching for performance
+- WebSocket support for live events
+- Production-ready with high availability
+- Complete REST API with authentication
+- Multi-instance support
+
 ## How to Create Skills
 
 This repository demonstrates how to create Claude skills using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
@@ -157,6 +196,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `ytdlp_github.json` - GitHub configuration for yt-dlp
 - `graphiti_github.json` - GitHub configuration for Graphiti
 - `graphrag_github.json` - GitHub configuration for Microsoft GraphRAG
+- `evolution_api_github.json` - GitHub configuration for Evolution API
 
 ## Resources
 
@@ -178,6 +218,11 @@ Configuration files for skill creation are stored in `configs/`:
 - **GitHub**: https://github.com/microsoft/graphrag
 - **Documentation**: https://microsoft.github.io/graphrag/
 - **Research Paper**: https://arxiv.org/abs/2404.16130
+
+### Evolution API
+- **GitHub**: https://github.com/EvolutionAPI/evolution-api
+- **Documentation**: https://doc.evolution-api.com/
+- **Website**: https://evolution-api.com
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers
