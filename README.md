@@ -31,6 +31,39 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - 100+ pre-built tool integrations
 - Performance optimization and best practices
 
+### yt-dlp Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for yt-dlp - feature-rich command-line audio/video downloader with support for thousands of sites.
+
+**What's Included:**
+- Complete yt-dlp usage guide and examples
+- Installation instructions for all platforms
+- Format selection and quality optimization
+- Audio extraction and conversion
+- Playlist and channel downloads
+- Live stream recording
+- Advanced features (SponsorBlock, metadata, subtitles)
+- Python integration examples
+- Troubleshooting and best practices
+
+**Usage:**
+1. Use the packaged skill: `output/yt-dlp.zip`
+2. Or explore the skill directory: `output/yt-dlp/`
+3. Main skill file: `output/yt-dlp/SKILL.md`
+
+**Key Features:**
+- Downloading videos from YouTube, Vimeo, TikTok, and thousands of other sites
+- Audio extraction as MP3, M4A, OPUS, and other formats
+- Playlist and channel batch downloads
+- Format selection and quality control
+- Subtitle and metadata embedding
+- Live stream recording
+- FFmpeg integration for post-processing
+- Browser cookie support for authenticated content
+- SponsorBlock integration
+- Configuration file support for automation
+
 ## How to Create Skills
 
 This repository demonstrates how to create Claude skills using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
@@ -51,11 +84,20 @@ zip -r agno.zip output/agno/
 Configuration files for skill creation are stored in `configs/`:
 - `agno_unified.json` - Unified configuration for Agno (docs + GitHub)
 - `agno_docs.json` - Documentation-only configuration
+- `ytdlp_github.json` - GitHub configuration for yt-dlp
 
 ## Resources
 
-- **Agno Framework**: https://github.com/agno-agi/agno
-- **Agno Documentation**: https://docs.agno.com
+### Agno
+- **GitHub**: https://github.com/agno-agi/agno
+- **Documentation**: https://docs.agno.com
+- **Community**: https://community.agno.com
+
+### yt-dlp
+- **GitHub**: https://github.com/yt-dlp/yt-dlp
+- **Supported Sites**: https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md
+
+### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers
 
 ## License

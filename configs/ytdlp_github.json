@@ -1,0 +1,6 @@
+{
+  "name": "yt-dlp",
+  "base_url": "https://github.com/yt-dlp/yt-dlp",
+  "output_dir": "output/yt-dlp",
+  "description": "Comprehensive skill for yt-dlp - feature-rich command-line audio/video downloader with support for thousands of sites"
+}
