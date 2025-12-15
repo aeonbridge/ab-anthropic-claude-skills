@@ -1,0 +1,6 @@
+{
+  "name": "mcp",
+  "base_url": "https://github.com/modelcontextprotocol",
+  "output_dir": "output/mcp",
+  "description": "Comprehensive skill for Model Context Protocol (MCP) - building servers and clients for LLM integrations"
+}
