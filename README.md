@@ -210,7 +210,44 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 
 ## How to Create Skills
 
-This repository demonstrates how to create Claude skills using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
+### Automated Skill Generation (Recommended)
+
+This repository includes automated scripts for creating comprehensive Claude skills:
+
+```bash
+# Quick start: Create a skill from URLs
+./create_skill.py <skill_name> <url1> [url2] [url3] ...
+
+# Example: Create FastAPI skill
+./create_skill.py fastapi \
+  https://fastapi.tiangolo.com \
+  https://github.com/tiangolo/fastapi
+
+# Example: Create Redis skill
+./create_skill.py redis \
+  https://redis.io/docs \
+  https://github.com/redis/redis-py
+
+# Get enhancement guidance
+./enhance_skill.py <skill_name>
+```
+
+**What the script does:**
+- Creates configuration file automatically
+- Generates comprehensive SKILL.md template
+- Creates proper directory structure
+- Packages as .zip file
+- Updates README.md
+- Commits and pushes to git
+
+**Documentation:**
+- 📖 [Complete Scripts Guide](SCRIPTS_GUIDE.md) - Detailed usage and options
+- 📚 [Examples](EXAMPLES.md) - 50+ examples for popular technologies
+- 🛠️ Scripts: `create_skill.py`, `enhance_skill.py`
+
+### Manual Skill Creation
+
+You can also create skills manually using [skill-seekers](https://github.com/yusufkaraaslan/Skill_Seekers):
 
 ```bash
 # Install skill-seekers
