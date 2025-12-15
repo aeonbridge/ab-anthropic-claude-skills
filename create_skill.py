@@ -131,6 +131,31 @@ class SkillGenerator:
 
         print("✅ Directory structure created")
 
+    def create_frontmatter(self) -> str:
+        """Create YAML frontmatter for SKILL.md"""
+        # Ensure name follows Claude AI format requirements
+        # lowercase letters, numbers, and hyphens only, max 64 chars
+        skill_title = self.skill_name.replace('-', ' ').title()
+
+        description = (
+            f"Comprehensive skill for {skill_title}. "
+            f"Use when working with {self.skill_name}, implementing features, "
+            f"deploying applications, or troubleshooting. "
+            f"Includes installation, configuration, best practices, and examples."
+        )
+
+        # Ensure description is within 1024 character limit
+        if len(description) > 1024:
+            description = description[:1021] + "..."
+
+        frontmatter = f"""---
+name: {self.skill_name}
+description: {description}
+---
+
+"""
+        return frontmatter
+
     def create_skill_md(self) -> Path:
         """Create comprehensive SKILL.md file"""
         print(f"📄 Creating SKILL.md with comprehensive documentation...")
@@ -140,10 +165,11 @@ class SkillGenerator:
         # Get primary GitHub URL for reference
         github_url = next((u for u in self.urls if "github.com" in u), self.urls[0])
 
-        # Create comprehensive skill template
-        content = f"""# {self.skill_name.replace('-', ' ').title()} Skill
+        # Create YAML frontmatter
+        frontmatter = self.create_frontmatter()
 
-## When to Use This Skill
+        # Create comprehensive skill template
+        content = frontmatter + f"""## When to Use This Skill
 
 Use this skill when you need to work with {self.skill_name}, including:
 - Understanding core concepts and architecture

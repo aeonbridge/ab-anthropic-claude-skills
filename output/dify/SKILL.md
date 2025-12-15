@@ -1,4 +1,7 @@
-# Dify Skill
+---
+name: dify-llm-platform
+description: Build LLM applications using Dify's visual workflow platform. Use when creating AI chatbots, implementing RAG pipelines, developing agents with tools, managing knowledge bases, deploying LLM apps, or building workflows with drag-and-drop. Supports hundreds of LLMs, Docker/Kubernetes deployment.
+---
 
 ## When to Use This Skill
 
