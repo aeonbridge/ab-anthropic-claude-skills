@@ -208,6 +208,38 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - MCP Inspector for development and testing
 - Production deployment patterns
 
+### Dify Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Dify - open-source platform for building agentic workflows and LLM applications with visual interface.
+
+**What's Included:**
+- Complete visual workflow builder guide
+- RAG (Retrieval-Augmented Generation) pipeline setup
+- Agent development with 50+ built-in tools
+- Knowledge base management and document processing
+- LLMOps monitoring and analytics
+- REST API integration (Python, Node.js)
+- Deployment guides (Docker, Kubernetes, Cloud platforms)
+- Production best practices and troubleshooting
+
+**Usage:**
+1. Use the packaged skill: `output/dify.zip`
+2. Or explore the skill directory: `output/dify/`
+3. Main skill file: `output/dify/SKILL.md`
+
+**Key Features:**
+- Visual workflow engine with drag-and-drop interface
+- Support for hundreds of LLMs from dozens of providers
+- Prompt IDE for model comparison
+- RAG pipeline with PDF, PPT, and document support
+- ReAct-based agents with custom tool integration
+- Application monitoring and performance analytics
+- Backend-as-a-Service with REST APIs
+- Deploy as web apps, APIs, or embedded components
+- Multiple deployment options (Cloud, Docker, Kubernetes)
+- Knowledge base chunking strategies and retrieval optimization
+
 ## How to Create Skills
 
 ### Automated Skill Generation (Recommended)
@@ -270,6 +302,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `graphrag_github.json` - GitHub configuration for Microsoft GraphRAG
 - `evolution_api_github.json` - GitHub configuration for Evolution API
 - `mcp_github.json` - GitHub configuration for Model Context Protocol
+- `dify_github.json` - GitHub configuration for Dify
 
 ## Resources
 
@@ -302,6 +335,12 @@ Configuration files for skill creation are stored in `configs/`:
 - **Python SDK**: https://github.com/modelcontextprotocol/python-sdk
 - **TypeScript SDK**: https://github.com/modelcontextprotocol/typescript-sdk
 - **Specification**: https://spec.modelcontextprotocol.io/
+
+### Dify
+- **GitHub**: https://github.com/langgenius/dify
+- **Documentation**: https://docs.dify.ai/
+- **Cloud Platform**: https://cloud.dify.ai
+- **Discord**: https://discord.gg/dify
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers
