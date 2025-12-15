@@ -1,0 +1,22 @@
+{
+  "name": "dify",
+  "output_dir": "/home/user/ab-anthropic-claude-skills/output",
+  "sources": [
+    {
+      "type": "github",
+      "repo": "langgenius/dify",
+      "include_issues": false,
+      "include_prs": false
+    },
+    {
+      "type": "web",
+      "url": "https://docs.dify.ai/en/use-dify/getting-started/introduction",
+      "depth": 2
+    },
+    {
+      "type": "web",
+      "url": "https://docs.dify.ai/en/use-dify/knowledge/readme",
+      "depth": 2
+    }
+  ]
+}
