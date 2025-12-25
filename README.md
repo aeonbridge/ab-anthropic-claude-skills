@@ -240,6 +240,28 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - Multiple deployment options (Cloud, Docker, Kubernetes)
 - Knowledge base chunking strategies and retrieval optimization
 
+
+### Langextract Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Langextract.
+
+**What's Included:**
+- Complete documentation and examples
+- API reference and best practices
+- Integration guides
+- Troubleshooting tips
+
+**Usage:**
+1. Use the packaged skill: `output/langextract.zip`
+2. Or explore the skill directory: `output/langextract/`
+3. Main skill file: `output/langextract/SKILL.md`
+
+**Key Features:**
+- Feature 1
+- Feature 2
+- Feature 3
+
 ## How to Create Skills
 
 ### Automated Skill Generation (Recommended)
@@ -303,6 +325,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `evolution_api_github.json` - GitHub configuration for Evolution API
 - `mcp_github.json` - GitHub configuration for Model Context Protocol
 - `dify_github.json` - GitHub configuration for Dify
+- `langextract_github.json` - GitHub configuration for Langextract
 
 ## Resources
 
@@ -341,6 +364,12 @@ Configuration files for skill creation are stored in `configs/`:
 - **Documentation**: https://docs.dify.ai/
 - **Cloud Platform**: https://cloud.dify.ai
 - **Discord**: https://discord.gg/dify
+
+
+### Langextract
+- **URL**: https://github.com/google/langextract
+- **URL**: https://github.com/google/langextract/tree/main/examples
+- **URL**: https://github.com/google/langextract/tree/main/docs/examples
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers

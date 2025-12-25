@@ -1,0 +1,12 @@
+{
+  "name": "langextract",
+  "output_dir": "/Users/jwcunha/Documents/AEON-BRIDGE/repos/private/ai-skills/ab-anthropic-claude-skills/output",
+  "sources": [
+    {
+      "type": "github",
+      "repo": "google/langextract",
+      "include_issues": false,
+      "include_prs": false
+    }
+  ]
+}
