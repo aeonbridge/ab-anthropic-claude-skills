@@ -46,18 +46,27 @@ class SkillGenerator:
             return "web"
 
     def create_config(self) -> Path:
-        """Create skill-seekers configuration file"""
+        """Create skill-seekers configuration file in unified format"""
         print(f"📝 Creating configuration for {self.skill_name}...")
 
         # Categorize URLs
         github_urls = [u for u in self.urls if self.detect_url_type(u) == "github"]
         doc_urls = [u for u in self.urls if self.detect_url_type(u) in ["docs", "web"]]
 
-        # Build config based on available URLs
+        # Build config in "unified" format compatible with skill-seekers
+        skill_title = self.skill_name.replace('-', ' ').title()
+
         config = {
             "name": self.skill_name,
-            "output_dir": str(self.output_dir),
-            "sources": []
+            "display_name": skill_title,
+            "description": f"Comprehensive skill for {skill_title}",
+            "version": "1.0.0",
+            "sources": {},
+            "output_dir": str(self.skill_dir),
+            "metadata": {
+                "author": "skill-seekers",
+                "category": "Development Tools"
+            }
         }
 
         # Add GitHub source if available
@@ -65,38 +74,62 @@ class SkillGenerator:
             github_url = github_urls[0]
             parts = urlparse(github_url).path.strip("/").split("/")
             if len(parts) >= 2:
-                config["sources"].append({
-                    "type": "github",
-                    "repo": f"{parts[0]}/{parts[1]}",
-                    "include_issues": False,
-                    "include_prs": False
-                })
+                config["sources"]["github"] = {
+                    "enabled": True,
+                    "repository": f"{parts[0]}/{parts[1]}",
+                    "include_readme": True,
+                    "include_code_samples": True,
+                    "max_files": 200,
+                    "file_patterns": [
+                        "*.md",
+                        "*.py",
+                        "*.js",
+                        "*.ts",
+                        "README*",
+                        "examples/**/*"
+                    ],
+                    "exclude_patterns": [
+                        "tests/",
+                        "__pycache__/",
+                        "*.pyc",
+                        ".git/",
+                        "node_modules/"
+                    ]
+                }
 
         # Add documentation sources
-        for doc_url in doc_urls:
-            config["sources"].append({
-                "type": "web",
-                "url": doc_url,
-                "depth": 2
-            })
+        if doc_urls:
+            base_url = doc_urls[0]
+            config["sources"]["documentation"] = {
+                "enabled": True,
+                "base_url": base_url,
+                "start_urls": doc_urls,
+                "max_depth": 3,
+                "max_pages": 500,
+                "extract_api": True
+            }
 
         # Save config file
-        config_file = self.configs_dir / f"{self.skill_name}_github.json"
+        config_file = self.configs_dir / f"{self.skill_name}_unified.json"
         config_file.parent.mkdir(exist_ok=True)
 
         with open(config_file, "w") as f:
             json.dump(config, f, indent=2)
 
         print(f"✅ Configuration saved to {config_file}")
+        print(f"   Format: unified (compatible with skill-seekers)")
         return config_file
 
-    def run_skill_seekers(self, config_file: Path, timeout: int = 300) -> bool:
-        """Run skill-seekers scraper with timeout"""
-        print(f"🔍 Running skill-seekers scraper (timeout: {timeout}s)...")
+    def run_skill_seekers(self, config_file: Path, timeout: int = 600) -> bool:
+        """Run skill-seekers unified scraper with timeout"""
+        print(f"🔍 Running skill-seekers unified scraper...")
+        print(f"   Timeout: {timeout}s ({timeout//60} minutes)")
+        print(f"   This may take a while for large documentation sites...")
 
         try:
+            # Use "unified" command for multi-source scraping
             result = subprocess.run(
-                ["skill-seekers", "scrape", "--config", str(config_file)],
+                ["skill-seekers", "unified", "--config", str(config_file)],
                 timeout=timeout,
                 capture_output=True,
                 text=True
@@ -104,16 +137,29 @@ class SkillGenerator:
 
             if result.returncode == 0:
                 print("✅ Skill-seekers completed successfully")
+                print(f"   Output: {result.stdout[:200] if result.stdout else 'No output'}")
                 return True
             else:
-                print(f"⚠️ Skill-seekers failed: {result.stderr}")
+                print(f"⚠️ Skill-seekers failed with return code {result.returncode}")
+                if result.stderr:
+                    print(f"   Error: {result.stderr[:500]}")
+                if result.stdout:
+                    print(f"   Output: {result.stdout[:500]}")
                 return False
 
         except subprocess.TimeoutExpired:
-            print(f"⚠️ Skill-seekers timed out after {timeout}s, proceeding with manual creation...")
+            print(f"⚠️ Skill-seekers timed out after {timeout}s ({timeout//60} minutes)")
+            print(f"   This can happen with very large documentation sites.")
+            print(f"   Proceeding with manual creation...")
             return False
         except FileNotFoundError:
-            print("⚠️ skill-seekers not found, proceeding with manual creation...")
+            print("⚠️ skill-seekers command not found")
+            print("   Install with: pip install skill-seekers")
+            print("   Proceeding with manual creation...")
+            return False
+        except Exception as e:
+            print(f"⚠️ Unexpected error running skill-seekers: {e}")
+            print("   Proceeding with manual creation...")
             return False
 
     def create_skill_structure(self):
@@ -577,8 +623,8 @@ Resources:
         else:
             print(f"⚠️ Nothing to commit or commit failed: {result.stderr}")
 
-    def generate(self, skip_git: bool = False):
-        """Run the complete skill generation pipeline"""
+    def generate(self, skip_git: bool = False, skip_skill_seekers: bool = False):
+        """Run the complete skill generation pipeline with hybrid approach"""
         print(f"\n{'='*60}")
         print(f"🚀 Generating Claude Skill: {self.skill_name}")
         print(f"{'='*60}\n")
@@ -586,36 +632,106 @@ Resources:
         # Step 1: Create configuration
         config_file = self.create_config()
 
-        # Step 2: Try to run skill-seekers (with short timeout)
-        # self.run_skill_seekers(config_file, timeout=120)
+        # Step 2: Run skill-seekers to populate references/ directory
+        seekers_success = False
+        if not skip_skill_seekers:
+            print("\n" + "="*60)
+            print("STEP 2: Running skill-seekers (Hybrid Approach)")
+            print("="*60)
+            seekers_success = self.run_skill_seekers(config_file, timeout=600)
 
-        # Step 3: Create skill structure
+            if seekers_success:
+                print("✅ References populated by skill-seekers")
+                print("   Check output/{}/references/ for extracted documentation".format(self.skill_name))
+            else:
+                print("⚠️  Skill-seekers did not complete successfully")
+                print("   References will need to be populated manually or via enhancement")
+        else:
+            print("\n⏭️  Skipping skill-seekers (--skip-skill-seekers flag)")
+
+        # Step 3: Create skill structure (if not already created by skill-seekers)
+        print("\n" + "="*60)
+        print("STEP 3: Ensuring directory structure")
+        print("="*60)
         self.create_skill_structure()
 
-        # Step 4: Create SKILL.md
-        self.create_skill_md()
+        # Step 4: Create or update SKILL.md template
+        print("\n" + "="*60)
+        print("STEP 4: Creating SKILL.md template")
+        print("="*60)
+
+        skill_md_file = self.skill_dir / "SKILL.md"
+        if skill_md_file.exists() and seekers_success:
+            print("ℹ️  SKILL.md already exists (created by skill-seekers)")
+            print("   Preserving existing content")
+        else:
+            self.create_skill_md()
 
         # Step 5: Package skill
+        print("\n" + "="*60)
+        print("STEP 5: Packaging skill")
+        print("="*60)
         zip_file = self.package_skill()
 
         # Step 6: Update README
+        print("\n" + "="*60)
+        print("STEP 6: Updating README.md")
+        print("="*60)
         self.update_readme()
 
         # Step 7: Git commit and push
         if not skip_git:
+            print("\n" + "="*60)
+            print("STEP 7: Git operations")
+            print("="*60)
             self.git_commit_and_push()
+        else:
+            print("\n⏭️  Skipping git operations (--skip-git flag)")
 
+        # Final summary
         print(f"\n{'='*60}")
         print(f"✅ Skill generation complete!")
         print(f"{'='*60}")
         print(f"\nSkill location: {self.skill_dir}")
         print(f"Package: {zip_file}")
-        print(f"\n⚠️  IMPORTANT: The generated SKILL.md is a template.")
-        print(f"   For production quality, enhance it with:")
-        print(f"   - Real code examples from the documentation")
-        print(f"   - Detailed API references")
-        print(f"   - Actual use cases and patterns")
-        print(f"   - Community best practices\n")
+
+        # Check references directory
+        refs_dir = self.skill_dir / "references"
+        if refs_dir.exists():
+            ref_files = list(refs_dir.glob("*.md"))
+            if ref_files:
+                print(f"\n📚 References populated: {len(ref_files)} files")
+                for ref_file in ref_files[:5]:  # Show first 5
+                    size = ref_file.stat().st_size
+                    print(f"   - {ref_file.name} ({size:,} bytes)")
+                if len(ref_files) > 5:
+                    print(f"   ... and {len(ref_files) - 5} more")
+            else:
+                print(f"\n⚠️  References directory is empty")
+                print(f"   Consider running skill-seekers manually or enhancing with Claude")
+
+        print(f"\n{'='*60}")
+        print(f"NEXT STEPS")
+        print(f"{'='*60}")
+
+        if seekers_success:
+            print("✅ Skill-seekers populated references successfully")
+            print("\n1. Review the extracted documentation in output/{}/references/".format(self.skill_name))
+            print("2. Enhance SKILL.md with specific examples and use cases")
+            print("3. Run: ./enhance_skill.py {}".format(self.skill_name))
+        else:
+            print("⚠️  Manual enhancement required")
+            print("\n1. Option A: Run skill-seekers manually:")
+            print("   skill-seekers unified --config configs/{}_unified.json".format(self.skill_name))
+            print("\n2. Option B: Enhance SKILL.md manually with:")
+            print("   - Real code examples from the documentation")
+            print("   - Detailed API references")
+            print("   - Actual use cases and patterns")
+            print("   - Community best practices")
+            print("\n3. Repackage after enhancement:")
+            print("   cd output && rm {}.zip && zip -r {}.zip {}/".format(
+                self.skill_name, self.skill_name, self.skill_name))
+        print()
 
 
 def main():
@@ -648,6 +764,12 @@ Examples:
     )
 
     parser.add_argument(
+        "--skip-skill-seekers",
+        action="store_true",
+        help="Skip skill-seekers execution (manual mode only)"
+    )
+
+    parser.add_argument(
         "--base-dir",
         type=Path,
         default=Path.cwd(),
@@ -669,7 +791,10 @@ Examples:
     )
 
     try:
-        generator.generate(skip_git=args.skip_git)
+        generator.generate(
+            skip_git=args.skip_git,
+            skip_skill_seekers=args.skip_skill_seekers
+        )
     except KeyboardInterrupt:
         print("\n\n⚠️ Operation cancelled by user")
         sys.exit(1)
