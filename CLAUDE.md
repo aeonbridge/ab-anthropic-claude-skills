@@ -67,20 +67,39 @@ ab-anthropic-claude-skills/
 
 ## Common Development Commands
 
-### Creating a New Skill
+### Creating a New Skill (Hybrid Approach)
 
 ```bash
-# Basic skill creation
+# Basic skill creation with automatic documentation extraction
 ./create_skill.py <skill-name> <url1> [url2] [url3] ...
 
-# Example: Create FastAPI skill
+# Example: Create FastAPI skill (will run skill-seekers automatically)
 ./create_skill.py fastapi \
   https://fastapi.tiangolo.com \
   https://github.com/tiangolo/fastapi
 
+# Skip skill-seekers (manual mode only)
+./create_skill.py myskill https://example.com --skip-skill-seekers
+
 # Skip git operations (useful during development)
 ./create_skill.py myskill https://example.com --skip-git
+
+# Skip both skill-seekers and git
+./create_skill.py myskill https://example.com --skip-skill-seekers --skip-git
 ```
+
+**What Happens:**
+1. Creates `configs/{skill}_unified.json` configuration
+2. Runs `skill-seekers unified` to extract documentation (10 min timeout)
+3. Populates `references/` directory with markdown files
+4. Creates/preserves SKILL.md
+5. Packages as ZIP
+6. Updates README.md
+7. Commits and pushes
+
+**When to Use Flags:**
+- `--skip-skill-seekers`: When you want to populate references/ manually
+- `--skip-git`: During development or when you want to review before committing
 
 ### Enhancing a Generated Skill
 
@@ -140,16 +159,41 @@ description: Brief description of what this skill does and when to use it  # max
 
 **Critical**: The `create_skill.py` script automatically generates compliant frontmatter. Never manually create skills without using the script or ensuring frontmatter compliance.
 
-### 2. Skill Generation Workflow
+### 2. Skill Generation Workflow (Hybrid Approach)
 
-The standard workflow implemented in `create_skill.py`:
-1. Categorize URLs (GitHub vs docs vs web)
-2. Create configuration JSON in `configs/`
-3. Create directory structure with .gitkeep files
-4. Generate SKILL.md with frontmatter + comprehensive template
-5. Package as .zip
-6. Update README.md
-7. Git commit and push (with retry logic)
+The hybrid workflow implemented in `create_skill.py`:
+
+**Step 1: Configuration Generation**
+- Categorize URLs (GitHub vs docs vs web)
+- Create unified format configuration JSON in `configs/{skill}_unified.json`
+- Compatible with skill-seekers multi-source scraping
+
+**Step 2: Skill-Seekers Execution (Automatic)**
+- Runs `skill-seekers unified` command
+- Timeout: 600 seconds (10 minutes)
+- Populates `references/` directory with extracted documentation
+- Creates initial SKILL.md (if successful)
+- Falls back gracefully if fails or times out
+
+**Step 3: Directory Structure**
+- Ensures `assets/`, `scripts/`, `references/` exist
+- Creates .gitkeep files for empty directories
+
+**Step 4: SKILL.md Template**
+- If skill-seekers succeeded: Preserves generated SKILL.md
+- If skill-seekers failed: Creates template SKILL.md
+- Includes YAML frontmatter for Claude AI compliance
+
+**Step 5: Packaging**
+- Creates `output/{skill-name}.zip` with all content
+- Includes populated references/ if skill-seekers succeeded
+
+**Step 6: README Update**
+- Adds skill section to README.md
+
+**Step 7: Git Operations**
+- Commits all changes
+- Pushes to current branch with retry logic
 
 ### 3. Template vs Production Skills
 
