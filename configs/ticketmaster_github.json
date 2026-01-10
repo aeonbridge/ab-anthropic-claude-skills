@@ -1,0 +1,31 @@
+{
+  "name": "ticketmaster",
+  "output_dir": "/home/user/ab-anthropic-claude-skills/output",
+  "sources": [
+    {
+      "type": "web",
+      "url": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/",
+      "depth": 2
+    },
+    {
+      "type": "web",
+      "url": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/",
+      "depth": 2
+    },
+    {
+      "type": "web",
+      "url": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2",
+      "depth": 2
+    },
+    {
+      "type": "web",
+      "url": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-images-v2",
+      "depth": 2
+    },
+    {
+      "type": "web",
+      "url": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#anchor_getGenre",
+      "depth": 2
+    }
+  ]
+}

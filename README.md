@@ -240,11 +240,10 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - Multiple deployment options (Cloud, Docker, Kubernetes)
 - Knowledge base chunking strategies and retrieval optimization
 
-
 ### Langextract Skill
 
 **Version:** 1.0.0
-**Description:** Comprehensive skill for Langextract.
+**Description:** Comprehensive skill for Langextract - Google's language detection and extraction library.
 
 **What's Included:**
 - Complete documentation and examples
@@ -258,9 +257,41 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 3. Main skill file: `output/langextract/SKILL.md`
 
 **Key Features:**
-- Feature 1
-- Feature 2
-- Feature 3
+- Language detection
+- Text extraction
+- Multi-language support
+
+### Ticketmaster API Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Ticketmaster Discovery API - event search and ticket discovery platform.
+
+**What's Included:**
+- Complete Ticketmaster Discovery API documentation
+- Authentication and API key management
+- Event search, details, images, and suggestions endpoints
+- Attraction and venue search capabilities
+- Classification and genre queries
+- Rate limiting and quota management (5 requests/second, 5000/day)
+- Python and JavaScript integration examples
+- React and Node.js use cases
+- Troubleshooting and best practices
+
+**Usage:**
+1. Use the packaged skill: `output/ticketmaster.zip`
+2. Or explore the skill directory: `output/ticketmaster/`
+3. Main skill file: `output/ticketmaster/SKILL.md`
+
+**Key Features:**
+- Search 230K+ events across US, Canada, Mexico, Australia, UK, Ireland, and Europe
+- Find events by keyword, location, category, date range
+- Get event details, images, venues, and attractions
+- Advanced filtering (price range, genre, segment)
+- Location-based search with radius
+- Pagination and sorting options
+- HAL format responses with embedded resources
+- Rate limit monitoring and management
+- Complete error handling patterns
 
 ## How to Create Skills
 
@@ -326,6 +357,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `mcp_github.json` - GitHub configuration for Model Context Protocol
 - `dify_github.json` - GitHub configuration for Dify
 - `langextract_github.json` - GitHub configuration for Langextract
+- `ticketmaster_github.json` - GitHub configuration for Ticketmaster
 
 ## Resources
 
@@ -365,11 +397,17 @@ Configuration files for skill creation are stored in `configs/`:
 - **Cloud Platform**: https://cloud.dify.ai
 - **Discord**: https://discord.gg/dify
 
-
 ### Langextract
-- **URL**: https://github.com/google/langextract
-- **URL**: https://github.com/google/langextract/tree/main/examples
-- **URL**: https://github.com/google/langextract/tree/main/docs/examples
+- **GitHub**: https://github.com/google/langextract
+- **Examples**: https://github.com/google/langextract/tree/main/examples
+- **Documentation**: https://github.com/google/langextract/tree/main/docs/examples
+
+### Ticketmaster
+- **Getting Started**: https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
+- **Discovery API**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+- **Search Events**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2
+- **Event Images**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-images-v2
+- **Classifications**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#anchor_getGenre
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers
