@@ -1,7 +1,6 @@
 ---
 name: agno
 description: Comprehensive skill for building, deploying, and managing multi-agent AI systems with Agno framework
-version: 1.0.0
 ---
 
 # Agno AI Framework Skill

@@ -1,7 +1,6 @@
 ---
 name: evolution-api
 description: Comprehensive skill for Evolution API - open-source WhatsApp integration platform with multi-service chatbot and automation support
-version: 1.0.0
 ---
 
 # Evolution API Skill

@@ -1,7 +1,6 @@
 ---
 name: graphiti
 description: Comprehensive skill for Graphiti and Zep - temporal knowledge graph framework for AI agents with dynamic context engineering
-version: 1.0.0
 ---
 
 # Graphiti & Zep Knowledge Graph Skill

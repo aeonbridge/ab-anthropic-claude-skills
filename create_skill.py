@@ -60,7 +60,6 @@ class SkillGenerator:
             "name": self.skill_name,
             "display_name": skill_title,
             "description": f"Comprehensive skill for {skill_title}",
-            "version": "1.0.0",
             "sources": {},
             "output_dir": str(self.skill_dir),
             "metadata": {

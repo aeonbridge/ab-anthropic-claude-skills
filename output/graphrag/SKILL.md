@@ -1,7 +1,6 @@
 ---
 name: graphrag
 description: Comprehensive skill for Microsoft GraphRAG - modular graph-based RAG system for reasoning over private datasets
-version: 1.0.0
 ---
 
 # Microsoft GraphRAG Skill

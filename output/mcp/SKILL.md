@@ -1,7 +1,6 @@
 ---
 name: mcp
 description: Comprehensive skill for Model Context Protocol (MCP) - building servers and clients for LLM context integration
-version: 1.0.0
 ---
 
 # Model Context Protocol (MCP) Skill

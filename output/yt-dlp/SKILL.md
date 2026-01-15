@@ -1,7 +1,6 @@
 ---
 name: yt-dlp
 description: Comprehensive skill for yt-dlp - feature-rich command-line audio/video downloader supporting thousands of sites
-version: 1.0.0
 ---
 
 # yt-dlp Skill
