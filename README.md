@@ -293,6 +293,28 @@ Collection of comprehensive Claude AI skills created using skill-seekers.
 - Rate limit monitoring and management
 - Complete error handling patterns
 
+
+### Dados Gov Br Skill
+
+**Version:** 1.0.0
+**Description:** Comprehensive skill for Dados Gov Br.
+
+**What's Included:**
+- Complete documentation and examples
+- API reference and best practices
+- Integration guides
+- Troubleshooting tips
+
+**Usage:**
+1. Use the packaged skill: `output/dados-gov-br.zip`
+2. Or explore the skill directory: `output/dados-gov-br/`
+3. Main skill file: `output/dados-gov-br/SKILL.md`
+
+**Key Features:**
+- Feature 1
+- Feature 2
+- Feature 3
+
 ## How to Create Skills
 
 ### Automated Skill Generation (Recommended)
@@ -358,6 +380,7 @@ Configuration files for skill creation are stored in `configs/`:
 - `dify_github.json` - GitHub configuration for Dify
 - `langextract_github.json` - GitHub configuration for Langextract
 - `ticketmaster_github.json` - GitHub configuration for Ticketmaster
+- `dados-gov-br_github.json` - GitHub configuration for Dados Gov Br
 
 ## Resources
 
@@ -408,6 +431,11 @@ Configuration files for skill creation are stored in `configs/`:
 - **Search Events**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2
 - **Event Images**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-images-v2
 - **Classifications**: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#anchor_getGenre
+
+
+### Dados Gov Br
+- **URL**: https://dados.gov.br/swagger-ui/index.html
+- **URL**: https://dados.gov.br
 
 ### Tools
 - **Skill Seekers**: https://github.com/yusufkaraaslan/Skill_Seekers

@@ -209,3 +209,6 @@ __marimo__/
 # Skill Seekers temporary data
 output/*/data/
 output/*_data/
+
+# Claude Code CLI local settings
+.claude/

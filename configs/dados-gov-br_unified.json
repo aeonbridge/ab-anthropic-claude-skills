@@ -1,0 +1,23 @@
+{
+  "name": "dados-gov-br",
+  "display_name": "Dados Gov Br",
+  "description": "Comprehensive skill for Dados Gov Br",
+  "sources": {
+    "documentation": {
+      "enabled": true,
+      "base_url": "https://dados.gov.br/swagger-ui/index.html",
+      "start_urls": [
+        "https://dados.gov.br/swagger-ui/index.html",
+        "https://dados.gov.br"
+      ],
+      "max_depth": 3,
+      "max_pages": 500,
+      "extract_api": true
+    }
+  },
+  "output_dir": "/Users/jwcunha/Documents/COMPANIES/AB/repos/public/ab-agentic/output/dados-gov-br",
+  "metadata": {
+    "author": "skill-seekers",
+    "category": "Development Tools"
+  }
+}
