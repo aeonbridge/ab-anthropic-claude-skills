@@ -1,0 +1,146 @@
+# Project-Specific Claude Code Configuration
+
+> This template shows how to configure Claude Code to automatically use the Agno skill
+
+## Active Skills
+
+### Agno Framework (AI Agents)
+
+**When to use:** Building AI agents, multi-agent systems, RAG applications, autonomous workflows
+
+**Skill triggers:**
+- "Create an Agno agent"
+- "Build a multi-agent system"
+- "Implement RAG with Agno"
+- "Setup Agno workflow"
+- Any mention of: agents, teams, workflows, AgentOS
+
+**Installation:**
+- Global: `~/.claude/skills/agno/`
+- Project: `.claude/skills/agno/`
+
+**Documentation:**
+- Main: `.claude/skills/agno/SKILL.md` (or `~/.claude/skills/agno/SKILL.md`)
+- API Reference: `references/llms.md`
+- Full docs: `references/llms-full.md`
+
+**Examples:**
+```python
+# Simple agent creation
+from agno.agent import Agent
+from agno.models.openai import OpenAIChat
+
+agent = Agent(
+    id="my-agent",
+    model=OpenAIChat(id="gpt-4"),
+    instructions="You are a helpful assistant."
+)
+agent.run("Hello!")
+```
+
+---
+
+## Project Context
+
+**Project Type:** [AI Application / Multi-Agent System / RAG Pipeline]
+
+**Primary Frameworks:**
+- Agno (AI Agents)
+- [Other frameworks...]
+
+**Development Commands:**
+```bash
+# Install dependencies
+pip install agno
+
+# Run agent
+python agents/main.py
+
+# Run tests
+pytest tests/
+```
+
+---
+
+## Skill Usage Preferences
+
+### Agno-Specific Preferences
+
+- **Model preference:** OpenAI GPT-4 / Anthropic Claude
+- **Storage:** PostgreSQL for agent sessions
+- **Memory:** Redis for short-term, Vector DB for knowledge
+- **Deployment:** Docker + AgentOS
+
+### Code Style
+
+- Use Python 3.12+ features
+- Type hints required
+- Async by default (`arun()` not `run()`)
+- Environment variables for config
+
+---
+
+## Auto-Discovery Validation
+
+To verify Claude Code discovers the Agno skill:
+
+```bash
+# Check skill is installed
+ls -la ~/.claude/skills/agno/SKILL.md
+# or
+ls -la .claude/skills/agno/SKILL.md
+
+# Validate frontmatter
+head -5 ~/.claude/skills/agno/SKILL.md
+# Should show:
+# ---
+# name: agno
+# description: Comprehensive skill for building, deploying, and managing multi-agent AI systems with Agno framework
+# ---
+```
+
+---
+
+## Troubleshooting
+
+### Claude Code not using Agno skill
+
+**Check:**
+1. Skill is installed: `ls -la ~/.claude/skills/agno/`
+2. Frontmatter is valid: `head -5 ~/.claude/skills/agno/SKILL.md`
+3. Description matches use case
+
+**Fix:**
+- Reinstall skill: `./install-agno-skill.sh global`
+- Add explicit instruction in this file
+- Use trigger phrase: "Use the Agno skill to create..."
+
+### Skill loads but references/ not found
+
+**Check:**
+- `ls -la ~/.claude/skills/agno/references/`
+
+**Fix:**
+- Copy complete structure: `cp -r output/agno/ ~/.claude/skills/`
+- Not just SKILL.md
+
+---
+
+## Additional Skills (If Using Multiple)
+
+### Dify (LLM Platform)
+- Location: `~/.claude/skills/dify/`
+- Use for: RAG workflows, visual pipelines
+
+### Graphiti (Knowledge Graphs)
+- Location: `~/.claude/skills/graphiti/`
+- Use for: Temporal memory, graph storage
+
+---
+
+## Notes
+
+- Skills in `~/.claude/skills/` are available globally (all projects)
+- Skills in `.claude/skills/` are project-specific
+- Claude Code uses "progressive disclosure" - only loads what's needed
+- Update this file as you add more skills or preferences
