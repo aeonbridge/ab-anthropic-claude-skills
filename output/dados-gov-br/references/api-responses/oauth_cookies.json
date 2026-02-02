@@ -1,0 +1,44 @@
+[
+  {
+    "name": "AWSALBCORS",
+    "value": "MRfyvKAao9JUkt+GYWoQBOkHkDahktCXYv+nxRDtH8GLgG84AsjdoVDt4LfvWd2UzErHpEqUV+5tIG+Cps4KTGPGjmIB9m5dg3SABgBHV0swDZNkjUGeCB9KSIwz",
+    "domain": "dados.gov.br",
+    "path": "/"
+  },
+  {
+    "name": "AWSALB",
+    "value": "MRfyvKAao9JUkt+GYWoQBOkHkDahktCXYv+nxRDtH8GLgG84AsjdoVDt4LfvWd2UzErHpEqUV+5tIG+Cps4KTGPGjmIB9m5dg3SABgBHV0swDZNkjUGeCB9KSIwz",
+    "domain": "dados.gov.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.341957468.1768944184",
+    "domain": ".dados.gov.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga_3TJ75C1VW5",
+    "value": "GS2.1.s1768944183$o1$g0$t1768944183$j60$l0$h0",
+    "domain": ".dados.gov.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga_YEVH28106Q",
+    "value": "GS2.1.s1768944183$o1$g0$t1768944183$j60$l0$h0",
+    "domain": ".dados.gov.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga_PZGRWZP59S",
+    "value": "GS2.1.s1768944183$o1$g0$t1768944183$j60$l0$h0",
+    "domain": ".dados.gov.br",
+    "path": "/"
+  },
+  {
+    "name": "_ga_Q5P3VN4T0E",
+    "value": "GS2.1.s1768944183$o1$g0$t1768944183$j60$l0$h0",
+    "domain": ".dados.gov.br",
+    "path": "/"
+  }
+]

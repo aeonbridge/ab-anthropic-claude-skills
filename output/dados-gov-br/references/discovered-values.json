@@ -1,0 +1,92 @@
+{
+  "resource_types": {
+    "DADOS": 7,
+    "API": 3,
+    "DICIONARIO_DE_DADOS": 1,
+    "DOCUMENTACAO": 2,
+    "OUTRO": 1
+  },
+  "formats": {
+    "CSV": 4,
+    "JSON": 3,
+    "PDF": 2,
+    "XLSX": 1,
+    "XML": 1,
+    "ZIP": 1,
+    "XLS": 1,
+    "TXT": 1
+  },
+  "organizations": {
+    "org-ministerio-saude": {
+      "name": "ministerio-da-saude",
+      "datasets_count": 342
+    },
+    "org-inep": {
+      "name": "inep",
+      "datasets_count": 156
+    },
+    "org-anac": {
+      "name": "anac",
+      "datasets_count": 89
+    },
+    "org-ibge": {
+      "name": "ibge",
+      "datasets_count": 523
+    },
+    "org-cgu": {
+      "name": "cgu",
+      "datasets_count": 278
+    }
+  },
+  "tags": {
+    "saúde": 1,
+    "covid-19": 1,
+    "epidemiologia": 1,
+    "educação": 1,
+    "censo-escolar": 1,
+    "estatísticas-educacionais": 1,
+    "aviação-civil": 1,
+    "transporte-aéreo": 1,
+    "infraestrutura": 1,
+    "demografia": 1,
+    "população": 1,
+    "estatísticas": 1,
+    "ibge": 1,
+    "transparência": 1,
+    "gastos-públicos": 1,
+    "orçamento": 1,
+    "dados-abertos": 1
+  },
+  "field_constraints": {
+    "title_lengths": {
+      "min": 18,
+      "max": 41,
+      "avg": 31.8,
+      "count": 5
+    },
+    "notes_lengths": {
+      "min": 137,
+      "max": 169,
+      "avg": 149.8,
+      "count": 5
+    },
+    "resource_sizes": {
+      "min": 8192,
+      "max": 104857600,
+      "avg": 20304989.09090909,
+      "count": 11
+    },
+    "tags_per_dataset": {
+      "min": 3,
+      "max": 4,
+      "avg": 3.4,
+      "count": 5
+    },
+    "resources_per_dataset": {
+      "min": 2,
+      "max": 3,
+      "avg": 2.8,
+      "count": 5
+    }
+  }
+}

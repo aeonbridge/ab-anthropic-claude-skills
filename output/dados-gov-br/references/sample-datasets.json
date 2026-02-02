@@ -1,0 +1,361 @@
+{
+  "result": {
+    "count": 15432,
+    "results": [
+      {
+        "id": "abc123-def456-ghi789",
+        "title": "Casos de COVID-19 no Brasil",
+        "notes": "Dados epidemiológicos sobre casos confirmados de COVID-19 no território brasileiro, incluindo dados demográficos, localização geográfica e evolução temporal da pandemia.",
+        "dataUltimaAtualizacaoRecurso": "2026-01-15T10:30:00Z",
+        "package_id": "covid-19-brasil",
+        "metadata_modified": "2026-01-15T10:30:00Z",
+        "last_modified": "2026-01-15T10:30:00Z",
+        "urlDisponivel": true,
+        "idTipo": 1,
+        "tags": [
+          {"id": "tag-001", "name": "saúde", "display_name": "Saúde"},
+          {"id": "tag-002", "name": "covid-19", "display_name": "COVID-19"},
+          {"id": "tag-003", "name": "epidemiologia", "display_name": "Epidemiologia"}
+        ],
+        "resources": [
+          {
+            "id": "res-001",
+            "format": "CSV",
+            "url": "https://dados.gov.br/dataset/covid-19/resource/dados-2026.csv",
+            "name": "Casos COVID-19 2026",
+            "description": "Casos confirmados de COVID-19 em 2026",
+            "created": "2026-01-10T08:00:00Z",
+            "size": 5242880,
+            "tipo": "DADOS",
+            "nomeArquivo": "covid-casos-2026.csv",
+            "quantidadeDownloads": 1523,
+            "numOrdem": 1
+          },
+          {
+            "id": "res-002",
+            "format": "JSON",
+            "url": "https://dados.gov.br/dataset/covid-19/resource/api-endpoint",
+            "name": "API COVID-19",
+            "description": "Endpoint de API REST para consultar dados em tempo real",
+            "created": "2026-01-05T12:00:00Z",
+            "size": 0,
+            "tipo": "API",
+            "nomeArquivo": "api-covid-19",
+            "quantidadeDownloads": 8945,
+            "numOrdem": 2
+          },
+          {
+            "id": "res-003",
+            "format": "PDF",
+            "url": "https://dados.gov.br/dataset/covid-19/resource/dicionario.pdf",
+            "name": "Dicionário de Dados COVID-19",
+            "description": "Documentação completa dos campos e metadados",
+            "created": "2026-01-01T09:00:00Z",
+            "size": 1048576,
+            "tipo": "DICIONARIO_DE_DADOS",
+            "nomeArquivo": "dicionario-covid-19.pdf",
+            "quantidadeDownloads": 456,
+            "numOrdem": 3
+          }
+        ],
+        "organization": {
+          "id": "org-ministerio-saude",
+          "name": "ministerio-da-saude",
+          "quantidadeConjuntoDadosAbertos": 342,
+          "quantidadeConjuntoDadosNaoAbertos": 45,
+          "indiceConjuntoDados": [
+            {
+              "name": "covid-19-brasil",
+              "id": "abc123-def456-ghi789",
+              "title": "Casos de COVID-19 no Brasil",
+              "notes": "Dados epidemiológicos",
+              "organizationId": "org-ministerio-saude",
+              "organizationName": "Ministério da Saúde"
+            }
+          ]
+        }
+      },
+      {
+        "id": "xyz789-uvw456-rst123",
+        "title": "Censo Escolar 2025",
+        "notes": "Dados do Censo Escolar brasileiro contendo informações sobre matrículas, escolas, docentes e infraestrutura educacional em todo o território nacional.",
+        "dataUltimaAtualizacaoRecurso": "2025-12-20T14:00:00Z",
+        "package_id": "censo-escolar-2025",
+        "metadata_modified": "2025-12-20T14:00:00Z",
+        "last_modified": "2025-12-20T14:00:00Z",
+        "urlDisponivel": true,
+        "idTipo": 1,
+        "tags": [
+          {"id": "tag-004", "name": "educação", "display_name": "Educação"},
+          {"id": "tag-005", "name": "censo-escolar", "display_name": "Censo Escolar"},
+          {"id": "tag-006", "name": "estatísticas-educacionais", "display_name": "Estatísticas Educacionais"}
+        ],
+        "resources": [
+          {
+            "id": "res-004",
+            "format": "CSV",
+            "url": "https://dados.gov.br/dataset/censo-escolar/matriculas.csv",
+            "name": "Matrículas 2025",
+            "description": "Dados de matrículas por escola e município",
+            "created": "2025-12-15T10:30:00Z",
+            "size": 15728640,
+            "tipo": "DADOS",
+            "nomeArquivo": "censo-matriculas-2025.csv",
+            "quantidadeDownloads": 3421,
+            "numOrdem": 1
+          },
+          {
+            "id": "res-005",
+            "format": "XLSX",
+            "url": "https://dados.gov.br/dataset/censo-escolar/docentes.xlsx",
+            "name": "Docentes 2025",
+            "description": "Informações sobre docentes da educação básica",
+            "created": "2025-12-15T11:00:00Z",
+            "size": 8388608,
+            "tipo": "DADOS",
+            "nomeArquivo": "censo-docentes-2025.xlsx",
+            "quantidadeDownloads": 2105,
+            "numOrdem": 2
+          },
+          {
+            "id": "res-006",
+            "format": "PDF",
+            "url": "https://dados.gov.br/dataset/censo-escolar/metodologia.pdf",
+            "name": "Metodologia do Censo Escolar",
+            "description": "Documento técnico sobre a metodologia de coleta",
+            "created": "2025-11-01T08:00:00Z",
+            "size": 2097152,
+            "tipo": "DOCUMENTACAO",
+            "nomeArquivo": "metodologia-censo-2025.pdf",
+            "quantidadeDownloads": 789,
+            "numOrdem": 3
+          }
+        ],
+        "organization": {
+          "id": "org-inep",
+          "name": "inep",
+          "quantidadeConjuntoDadosAbertos": 156,
+          "quantidadeConjuntoDadosNaoAbertos": 12,
+          "indiceConjuntoDados": [
+            {
+              "name": "censo-escolar-2025",
+              "id": "xyz789-uvw456-rst123",
+              "title": "Censo Escolar 2025",
+              "notes": "Dados do Censo Escolar",
+              "organizationId": "org-inep",
+              "organizationName": "Instituto Nacional de Estudos e Pesquisas Educacionais"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lmn456-opq789-abc012",
+        "title": "Dados de Voos e Aeroportos - ANAC",
+        "notes": "Informações sobre operações aeroportuárias, movimentação de passageiros, pontualidade de voos e estatísticas da aviação civil brasileira.",
+        "dataUltimaAtualizacaoRecurso": "2026-01-18T16:45:00Z",
+        "package_id": "voos-aeroportos-anac",
+        "metadata_modified": "2026-01-18T16:45:00Z",
+        "last_modified": "2026-01-18T16:45:00Z",
+        "urlDisponivel": true,
+        "idTipo": 1,
+        "tags": [
+          {"id": "tag-007", "name": "aviação-civil", "display_name": "Aviação Civil"},
+          {"id": "tag-008", "name": "transporte-aéreo", "display_name": "Transporte Aéreo"},
+          {"id": "tag-009", "name": "infraestrutura", "display_name": "Infraestrutura"}
+        ],
+        "resources": [
+          {
+            "id": "res-007",
+            "format": "JSON",
+            "url": "https://dados.gov.br/dataset/anac-voos/voos-tempo-real",
+            "name": "Voos em Tempo Real",
+            "description": "API para consultar voos em operação",
+            "created": "2026-01-01T00:00:00Z",
+            "size": 0,
+            "tipo": "API",
+            "nomeArquivo": "api-voos-tempo-real",
+            "quantidadeDownloads": 12456,
+            "numOrdem": 1
+          },
+          {
+            "id": "res-008",
+            "format": "XML",
+            "url": "https://dados.gov.br/dataset/anac-voos/historico-2025.xml",
+            "name": "Histórico de Voos 2025",
+            "description": "Dados históricos de todos os voos de 2025",
+            "created": "2026-01-02T10:00:00Z",
+            "size": 52428800,
+            "tipo": "DADOS",
+            "nomeArquivo": "historico-voos-2025.xml",
+            "quantidadeDownloads": 567,
+            "numOrdem": 2
+          },
+          {
+            "id": "res-009",
+            "format": "ZIP",
+            "url": "https://dados.gov.br/dataset/anac-voos/dados-completos.zip",
+            "name": "Pacote Completo de Dados",
+            "description": "Arquivo comprimido com todos os dados disponíveis",
+            "created": "2026-01-15T14:30:00Z",
+            "size": 104857600,
+            "tipo": "OUTRO",
+            "nomeArquivo": "anac-dados-completos.zip",
+            "quantidadeDownloads": 234,
+            "numOrdem": 3
+          }
+        ],
+        "organization": {
+          "id": "org-anac",
+          "name": "anac",
+          "quantidadeConjuntoDadosAbertos": 89,
+          "quantidadeConjuntoDadosNaoAbertos": 23,
+          "indiceConjuntoDados": [
+            {
+              "name": "voos-aeroportos-anac",
+              "id": "lmn456-opq789-abc012",
+              "title": "Dados de Voos e Aeroportos - ANAC",
+              "notes": "Informações sobre operações aeroportuárias",
+              "organizationId": "org-anac",
+              "organizationName": "Agência Nacional de Aviação Civil"
+            }
+          ]
+        }
+      },
+      {
+        "id": "pqr345-stu678-vwx901",
+        "title": "IBGE - População Brasileira por Município",
+        "notes": "Estimativas populacionais oficiais do IBGE para todos os municípios brasileiros, incluindo projeções demográficas e distribuição por faixa etária e sexo.",
+        "dataUltimaAtualizacaoRecurso": "2025-08-30T09:00:00Z",
+        "package_id": "ibge-populacao-municipios",
+        "metadata_modified": "2025-08-30T09:00:00Z",
+        "last_modified": "2025-08-30T09:00:00Z",
+        "urlDisponivel": true,
+        "idTipo": 1,
+        "tags": [
+          {"id": "tag-010", "name": "demografia", "display_name": "Demografia"},
+          {"id": "tag-011", "name": "população", "display_name": "População"},
+          {"id": "tag-012", "name": "estatísticas", "display_name": "Estatísticas"},
+          {"id": "tag-013", "name": "ibge", "display_name": "IBGE"}
+        ],
+        "resources": [
+          {
+            "id": "res-010",
+            "format": "CSV",
+            "url": "https://dados.gov.br/dataset/ibge-pop/estimativas-2025.csv",
+            "name": "Estimativas Populacionais 2025",
+            "description": "População estimada por município para 2025",
+            "created": "2025-08-30T08:00:00Z",
+            "size": 3145728,
+            "tipo": "DADOS",
+            "nomeArquivo": "ibge-estimativas-2025.csv",
+            "quantidadeDownloads": 5678,
+            "numOrdem": 1
+          },
+          {
+            "id": "res-011",
+            "format": "XLS",
+            "url": "https://dados.gov.br/dataset/ibge-pop/piramide-etaria.xls",
+            "name": "Pirâmide Etária",
+            "description": "Distribuição da população por faixa etária e sexo",
+            "created": "2025-08-25T10:00:00Z",
+            "size": 4194304,
+            "tipo": "DADOS",
+            "nomeArquivo": "piramide-etaria-brasil.xls",
+            "quantidadeDownloads": 2341,
+            "numOrdem": 2
+          }
+        ],
+        "organization": {
+          "id": "org-ibge",
+          "name": "ibge",
+          "quantidadeConjuntoDadosAbertos": 523,
+          "quantidadeConjuntoDadosNaoAbertos": 34,
+          "indiceConjuntoDados": [
+            {
+              "name": "ibge-populacao-municipios",
+              "id": "pqr345-stu678-vwx901",
+              "title": "IBGE - População Brasileira por Município",
+              "notes": "Estimativas populacionais oficiais",
+              "organizationId": "org-ibge",
+              "organizationName": "Instituto Brasileiro de Geografia e Estatística"
+            }
+          ]
+        }
+      },
+      {
+        "id": "def234-ghi567-jkl890",
+        "title": "Transparência - Gastos Públicos Federais",
+        "notes": "Dados detalhados sobre execução orçamentária do governo federal, incluindo empenhos, liquidações e pagamentos de todas as unidades gestoras.",
+        "dataUltimaAtualizacaoRecurso": "2026-01-19T18:00:00Z",
+        "package_id": "transparencia-gastos-federais",
+        "metadata_modified": "2026-01-19T18:00:00Z",
+        "last_modified": "2026-01-19T18:00:00Z",
+        "urlDisponivel": true,
+        "idTipo": 1,
+        "tags": [
+          {"id": "tag-014", "name": "transparência", "display_name": "Transparência"},
+          {"id": "tag-015", "name": "gastos-públicos", "display_name": "Gastos Públicos"},
+          {"id": "tag-016", "name": "orçamento", "display_name": "Orçamento"},
+          {"id": "tag-017", "name": "dados-abertos", "display_name": "Dados Abertos"}
+        ],
+        "resources": [
+          {
+            "id": "res-012",
+            "format": "CSV",
+            "url": "https://dados.gov.br/dataset/cgu/gastos-2026.csv",
+            "name": "Gastos Federais Janeiro 2026",
+            "description": "Execução orçamentária de janeiro de 2026",
+            "created": "2026-01-19T17:00:00Z",
+            "size": 26214400,
+            "tipo": "DADOS",
+            "nomeArquivo": "gastos-federais-jan-2026.csv",
+            "quantidadeDownloads": 1890,
+            "numOrdem": 1
+          },
+          {
+            "id": "res-013",
+            "format": "JSON",
+            "url": "https://dados.gov.br/dataset/cgu/api-gastos",
+            "name": "API de Gastos Públicos",
+            "description": "API REST para consultar gastos em tempo real",
+            "created": "2025-01-01T00:00:00Z",
+            "size": 0,
+            "tipo": "API",
+            "nomeArquivo": "api-gastos-publicos",
+            "quantidadeDownloads": 23456,
+            "numOrdem": 2
+          },
+          {
+            "id": "res-014",
+            "format": "TXT",
+            "url": "https://dados.gov.br/dataset/cgu/readme.txt",
+            "name": "Leia-me",
+            "description": "Instruções de uso dos dados",
+            "created": "2025-01-01T00:00:00Z",
+            "size": 8192,
+            "tipo": "DOCUMENTACAO",
+            "nomeArquivo": "readme-gastos.txt",
+            "quantidadeDownloads": 456,
+            "numOrdem": 3
+          }
+        ],
+        "organization": {
+          "id": "org-cgu",
+          "name": "cgu",
+          "quantidadeConjuntoDadosAbertos": 278,
+          "quantidadeConjuntoDadosNaoAbertos": 89,
+          "indiceConjuntoDados": [
+            {
+              "name": "transparencia-gastos-federais",
+              "id": "def234-ghi567-jkl890",
+              "title": "Transparência - Gastos Públicos Federais",
+              "notes": "Dados detalhados sobre execução orçamentária",
+              "organizationId": "org-cgu",
+              "organizationName": "Controladoria-Geral da União"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
